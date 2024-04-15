@@ -100,7 +100,8 @@ WHERE Appointment.dentist_id = 1;
 -- Display the list of ALL Appointments that have been scheduled at a Surgery Location: --
 SELECT Appointment.*, Surgery.*
 FROM Appointment
-JOIN Surgery ON Appointment.surgery_id = Surgery.surgery_id;
+JOIN Surgery ON Appointment.surgery_id = Surgery.surgery_id
+WHERE Surgery.location = 'City';
 
 -- Display the list of the Appointments booked for a given Patient on a given Date: --
 SELECT Appointment.*
